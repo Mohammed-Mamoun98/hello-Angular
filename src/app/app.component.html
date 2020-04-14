@@ -1,4 +1,4 @@
-<div class="styled">
+<!-- <div class="styled">
   <p>
     root works
   </p>
@@ -7,9 +7,9 @@
   <app-users></app-users>
   <app-bindungs></app-bindungs>
   <app-property-bindings></app-property-bindings>
-  <app-event-bindings></app-event-bindings>
-  <!-- when putting [(parameter)] you telling angular that property is two way which means that it's an input to child and can take change from the child too if the child overrides it the input to the child change too -->
-  <app-io
+  <app-event-bindings></app-event-bindings> -->
+<!-- when putting [(parameter)] you telling angular that property is two way which means that it's an input to child and can take change from the child too if the child overrides it the input to the child change too -->
+<!-- <app-io
     [name]="title"
     [human]="human"
     [counter]="counter"
@@ -18,4 +18,11 @@
     [prop]="5"
   ></app-io>
   <div class="">State : {{ state }}</div>
-</div>
+  <input type="text" [(ngModel)]="data" />
+  <div class="">data : {{ data }}</div>
+  <div class="">Attribute binding</div>
+  <app-attribute-binding></app-attribute-binding>
+  <app-class-bindings></app-class-bindings>
+</div> -->
+
+<app-todoapp></app-todoapp>

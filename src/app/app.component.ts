@@ -8,6 +8,7 @@ import { Human } from "./components/io/io.component";
 })
 export class AppComponent {
   title = "new-app";
+  data = "";
   state: string = "positive";
   counter: number = 0;
   human: Human = {

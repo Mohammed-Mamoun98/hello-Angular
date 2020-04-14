@@ -1,0 +1,21 @@
+.wrapper {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  min-width: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete {
+  width: 1rem;
+  height: 1rem;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}

@@ -1,0 +1,7 @@
+<p *ngFor="let todo of todos">
+  <app-todo-item
+    (onDelete)="handleDelete($event)"
+    [title]="todo.title"
+    [id]="todo.id"
+  ></app-todo-item>
+</p>
