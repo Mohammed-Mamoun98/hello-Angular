@@ -1,2 +1,19 @@
-<p>users works!</p>
-<app-user></app-user>
+<div class="wrapper">
+  <div class="">
+    <li *ngFor="let user of users" style="cursor: pointer;">
+      <a routerLink="./{{ user.id }}">
+        {{ user.name }}
+      </a>
+      <button (click)="delete(user.id)">Delete</button>
+    </li>
+  </div>
+  <div class="details">
+    <router-outlet></router-outlet>
+    <!-- <app-user></app-user> -->
+  </div>
+</div>
+<div class="" style="display: flex;">
+  <button (click)="create()">Create</button>
+  <button (click)="update()">Update</button>
+  <button (click)="getPosts()">Get Posts</button>
+</div>

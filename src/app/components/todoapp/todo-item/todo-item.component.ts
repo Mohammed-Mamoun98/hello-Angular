@@ -1,11 +1,20 @@
-import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  Input,
+  Output,
+  EventEmitter,
+  OnChanges,
+  DoCheck,
+  SimpleChanges,
+} from "@angular/core";
 
 @Component({
   selector: "app-todo-item",
   templateUrl: "./todo-item.component.html",
   styleUrls: ["./todo-item.component.scss"],
 })
-export class TodoItemComponent implements OnInit {
+export class TodoItemComponent implements OnInit, OnChanges, DoCheck {
   @Input() title: string;
   @Input() id: number;
   @Output() onDelete: EventEmitter<number> = new EventEmitter<number>();
@@ -14,7 +23,21 @@ export class TodoItemComponent implements OnInit {
     this.onDelete.emit(this.id);
   }
 
-  constructor() {}
+  constructor() {
+    console.log("message has been created", this.title);
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log("message has been created", this.title);
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log("message has been created", this.title);
+    for (let prop in changes)
+      console.log(
+        `property name : ${prop}, currentValue : ${changes[prop].currentValue}, prevValue : ${changes[prop].previousValue}`
+      );
+  }
+
+  ngDoCheck() {}
 }

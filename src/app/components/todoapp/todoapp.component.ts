@@ -15,6 +15,10 @@ export class TodoappComponent implements OnInit {
   todos: Todo[] = [];
   id: number = 0;
 
+  makeChange() {
+    if (this.todos.length > 0)
+      this.todos[0].title = "this title has been overriden!";
+  }
   onDelete(id: number) {
     this.todos = this.todos.filter((item: Todo) => item.id !== id);
   }

@@ -1,0 +1,10 @@
+<div *ngIf="user" class="">
+  Name : <br />
+  {{ user.name }} <br />
+  Email : <br />
+  {{ user.email }}<br />
+  Address : <br />
+  <pre>
+    {{ user.address | json }}
+  </pre>
+</div>

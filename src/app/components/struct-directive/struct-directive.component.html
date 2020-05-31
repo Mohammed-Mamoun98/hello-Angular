@@ -1,0 +1,14 @@
+<button (click)="toggle()">toggle</button>
+
+<div class="" *ngIf="show">
+  <div class="">
+    <li *ngFor="let msg of msgs; let i = index">{{ msg }} -- {{ i }}</li>
+  </div>
+</div>
+
+<input type="text" [(ngModel)]="value" (keyup)="handleInput($event)" />
+<div class="" [ngSwitch]="true">
+  <div *ngSwitchCase="type === 'success'" class="">Correct</div>
+  <div *ngSwitchCase="type === 'wrong'" class="">False</div>
+  <div *ngSwitchDefault>Empty</div>
+</div>
