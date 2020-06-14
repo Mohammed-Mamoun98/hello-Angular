@@ -29,6 +29,8 @@ export class FormComponent implements OnInit {
   newForm: FormGroup;
   constructor(private fb: FormBuilder) {}
 
+  createFormGroup() {}
+
   ngOnInit() {
     const singleRowUnit = this.fb.group({
       price: "",
@@ -47,6 +49,5 @@ export class FormComponent implements OnInit {
       email: "initial Value",
     });
     this.keys = Object.keys(this.ediableRow.value);
-    // this.ediableRow.valueChanges.subscribe(console.log);
   }
 }

@@ -20,7 +20,11 @@ export class HtmlToPdfComponent implements OnInit, AfterViewInit {
   }
 
   public downloadPdf() {
-    let doc = new jsPDF();
+    let doc = new jsPDF({
+      orientation: "landscape",
+      unit: "mm",
+      format: [900, 500],
+    });
     let specialElementHanlders = {
       "#editor": function (element, renderer) {
         return true;
